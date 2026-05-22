@@ -1,0 +1,328 @@
+/* 1) Design tokens */
+:root {
+  --bg: #0b1220;
+  --surface: #111a2e;
+  --text: #e9eefc;
+  --muted: #aab6d6;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #5aa7ff;
+  --accent-2: #8b5cf6;
+  --danger: #ff5a7a;
+  --ok: rgba(90, 255, 167, 0.45);
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* 2) Base styles */
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(1200px 800px at 20% 0%, rgba(90,167,255,0.25), transparent 60%),
+    radial-gradient(900px 600px at 90% 10%, rgba(139,92,246,0.25), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a { color: inherit; }
+
+/* 3) Semantic layout */
+.site-header, .site-main, .site-footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 18, 32, 0.65);
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+.logo-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 12px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.04);
+}
+
+.nav a[aria-current="page"] {
+  color: var(--text);
+  border-color: rgba(90,167,255,0.55);
+  box-shadow: 0 0 0 4px rgba(90,167,255,0.12);
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 4) Card surface (reused from ContactUs) */
+.card {
+  margin-top: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.card-title {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.muted { color: var(--muted); }
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+@media (min-width: 860px) {
+  .grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+}
+
+.hero {
+  margin-top: 16px;
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(900px 420px at 10% 20%, rgba(90,167,255,0.25), transparent 62%),
+    radial-gradient(700px 360px at 90% 20%, rgba(139,92,246,0.25), transparent 60%),
+    rgba(255,255,255,0.04);
+}
+
+.hero h1 { margin: 0 0 10px; font-size: clamp(1.6rem, 3.2vw, 2.3rem); }
+.hero p { margin: 0 0 14px; color: var(--muted); }
+
+.pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* 5) ContactUs form styles (from your Module 1 demo) */
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 6px);
+  padding: 14px;
+  margin: 0 0 14px;
+}
+
+legend {
+  padding: 0 10px;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+label {
+  font-weight: 650;
+  letter-spacing: 0.2px;
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.18);
+  color: var(--text);
+  outline: none;
+  transition: border-color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+}
+
+input[type="email"] { letter-spacing: 0.2px; }
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(233, 238, 252, 0.45);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  border-color: rgba(90,167,255,0.85);
+  box-shadow: 0 0 0 4px rgba(90,167,255,0.18);
+}
+
+input:required:invalid,
+textarea:required:invalid {
+  border-color: rgba(255, 90, 122, 0.65);
+}
+
+input:required:valid { border-color: var(--ok); }
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+button {
+  border: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 750;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+button:hover { filter: brightness(1.05); transform: translateY(-1px); }
+button:active { transform: translateY(0); }
+
+button.secondary {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.hint { margin: 12px 0 0; color: var(--muted); }
+
+@media (min-width: 720px) {
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+}
+
+/* 6) Simple components for lesson pages */
+.list { margin: 0; padding-left: 18px; color: var(--muted); }
+.list li { margin: 6px 0; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.table th, .table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.table th { text-align: left; color: var(--text); background: rgba(255,255,255,0.05); }
+.table td { color: var(--muted); }
+
+.badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+details {
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 12px;
+  padding: 12px 12px;
+  background: rgba(255,255,255,0.03);
+}
+
+details + details { margin-top: 10px; }
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.site-footer {
+  color: var(--muted);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 18px;
+}
+
+.small { font-size: 0.92rem; }
+
+
+/* Module 2 output box */
+.notice {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(90, 255, 167, 0.25);
+  background: rgba(90, 255, 167, 0.08);
+  color: var(--text);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+.notice-title {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.notice p {
+  margin: 6px 0;
+}

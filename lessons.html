@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lessons | Module 1 Demo Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <a class="logo" href="index.html" aria-label="Module 1 Demo Site">
+      <span class="logo-badge" aria-hidden="true"></span>
+      Module 1 Demo Site
+    </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="resources.html">Resources</a>
+        <a href="ContactUs.html">Contact</a>
+      </nav>
+
+    <div class="header-actions">
+      <button type="button" class="secondary" data-action="cycle-accent" aria-label="Change theme accent">Theme</button>
+    </div>
+  </div>
+</header>
+
+<main class="site-main">
+  <section class="hero">
+    <h1>Lesson plan (Module 1)</h1>
+    <p>Use this page to guide the session. The content is written to match the demo site features.</p>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">Lesson flow (60–90 minutes)</h2>
+    <table class="table" aria-label="Lesson flow table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Topic</th>
+          <th>What students do</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10 min</td>
+          <td>HTML structure</td>
+          <td>Identify header/main/footer and navigation on each page</td>
+        </tr>
+        <tr>
+          <td>15 min</td>
+          <td>CSS tokens + reuse</td>
+          <td>Edit <code>:root</code> variables and see changes across the site</td>
+        </tr>
+        <tr>
+          <td>15 min</td>
+          <td>Selectors + states</td>
+          <td>Inspect <code>.card</code>, <code>input:focus-visible</code>, <code>:required:invalid</code></td>
+        </tr>
+        <tr>
+          <td>15 min</td>
+          <td>DevTools</td>
+          <td>Live-edit styles in Edge DevTools and take screenshots</td>
+        </tr>
+        <tr>
+          <td>15 min</td>
+          <td>JavaScript basics</td>
+          <td>Click Theme button, inspect event listeners, submit Contact form</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">Mini tasks (for practice)</h2>
+    <div class="grid cols-2">
+      <div>
+        <p class="muted"><span class="badge">CSS</span> Tasks</p>
+        <ul class="list">
+          <li>Change <code>--bg</code> and <code>--accent</code> to create a new theme</li>
+          <li>Make the nav buttons larger using padding</li>
+          <li>Add <code>input:hover</code> style</li>
+        </ul>
+      </div>
+      <div>
+        <p class="muted"><span class="badge">HTML</span> Tasks</p>
+        <ul class="list">
+          <li>Add a new page section using a <code>&lt;section&gt;</code> tag</li>
+          <li>Add an ordered list of steps for submitting the form</li>
+          <li>Add a new field to the contact form (e.g., phone)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="small">Built for Module 1: HTML structure + CSS selectors + basic JavaScript + Edge DevTools.</p>
+</footer>
+</body>
+</html>

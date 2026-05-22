@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home | Module 1 Demo Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <a class="logo" href="index.html" aria-label="Module 1 Demo Site">
+      <span class="logo-badge" aria-hidden="true"></span>
+      Module 1 Demo Site
+    </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="resources.html">Resources</a>
+        <a href="ContactUs.html">Contact</a>
+      </nav>
+
+    <div class="header-actions">
+      <button type="button" class="secondary" data-action="cycle-accent" aria-label="Change theme accent">Theme</button>
+    </div>
+  </div>
+</header>
+
+<main class="site-main">
+  <section class="hero">
+    <h1>Modern HTML + CSS + JavaScript (Module 1)</h1>
+    <p>Welcome! This 5-page site is your complete lesson project. It demonstrates semantic HTML, modern CSS (variables, layout, states), and beginner-friendly JavaScript.</p>
+    <div class="pills" aria-label="Key topics">
+      <span class="pill">Semantic structure</span>
+      <span class="pill">Forms + validation</span>
+      <span class="pill">CSS variables</span>
+      <span class="pill">Responsive layout</span>
+      <span class="pill">DOM events</span>
+    </div>
+  </section>
+
+  <section class="grid cols-3" style="margin-top:14px">
+    <article class="card">
+      <h2 class="card-title">What you will build</h2>
+      <p class="muted">A mini site with navigation, styling, and interactive behavior.</p>
+      <ul class="list">
+        <li>Consistent header/footer on all pages</li>
+        <li>Reusable CSS theme tokens</li>
+        <li>Contact form with built-in validation</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2 class="card-title">Try this now</h2>
+      <p class="muted">Click <span class="badge">Theme</span> in the header to cycle accent colors.</p>
+      <ul class="list">
+        <li>Open DevTools (F12) → Elements → :root</li>
+        <li>Edit <code>--accent</code> live</li>
+        <li>Refresh to revert</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2 class="card-title">Module 1 outcomes</h2>
+      <p class="muted">You should be able to explain:</p>
+      <ul class="list">
+        <li>HTML page structure and semantics</li>
+        <li>CSS selectors and the cascade</li>
+        <li>How JS connects behavior to UI</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="small">Built for Module 1: HTML structure + CSS selectors + basic JavaScript + Edge DevTools.</p>
+</footer>
+</body>
+</html>

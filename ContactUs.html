@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact | Module 1 Demo Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <a class="logo" href="index.html" aria-label="Module 1 Demo Site">
+      <span class="logo-badge" aria-hidden="true"></span>
+      Module 1 Demo Site
+    </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="resources.html">Resources</a>
+        <a href="ContactUs.html">Contact</a>
+      </nav>
+
+    <div class="header-actions">
+      <button type="button" class="secondary" data-action="cycle-accent" aria-label="Change theme accent">Theme</button>
+    </div>
+  </div>
+</header>
+
+<main class="site-main">
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>Demonstrates modern forms: semantic structure, fieldsets, labels, placeholders, autocomplete, and built-in validation.</p>
+  </section>
+
+  <form id="contactForm" class="card">
+    <fieldset>
+      <legend>Your Details</legend>
+
+      <div class="two-col">
+        <div class="field">
+          <label for="firstName">First name *</label>
+          <input id="firstName" name="firstName" type="text" required placeholder="e.g. Shivesh" autocomplete="given-name" />
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last name *</label>
+          <input id="lastName" name="lastName" type="text" required placeholder="e.g. Ramouthar" autocomplete="family-name" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required placeholder="e.g. shivesh@example.com" autocomplete="email" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Message</legend>
+
+      <div class="field">
+        <label for="subject">Subject *</label>
+        <input id="subject" name="subject" type="text" required placeholder="e.g. Enquiry about the course" autocomplete="off" />
+      </div>
+
+      <div class="field">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required placeholder="Type your message here..." autocomplete="off"></textarea>
+      </div>
+    </fieldset>
+
+    <div class="actions">
+      <button type="submit">Submit</button>
+      <button type="reset" class="secondary">Reset</button>
+    </div>
+
+    <p class="hint">Tip: Click <strong>Submit</strong> without filling required fields to see built-in browser validation.</p>
+  </form>
+
+  <div id="formOutput" class="notice" hidden></div>
+</main>
+
+<footer class="site-footer">
+  <p class="small">Built for Module 1: HTML structure + CSS selectors + basic JavaScript + Edge DevTools.</p>
+</footer>
+</body>
+</html>

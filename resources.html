@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Resources | Module 1 Demo Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <a class="logo" href="index.html" aria-label="Module 1 Demo Site">
+      <span class="logo-badge" aria-hidden="true"></span>
+      Module 1 Demo Site
+    </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="resources.html">Resources</a>
+        <a href="ContactUs.html">Contact</a>
+      </nav>
+
+    <div class="header-actions">
+      <button type="button" class="secondary" data-action="cycle-accent" aria-label="Change theme accent">Theme</button>
+    </div>
+  </div>
+</header>
+
+<main class="site-main">
+  <section class="hero">
+    <h1>Resources</h1>
+    <p>Quick reference material for students. This page also demonstrates semantic lists and the <code>&lt;details&gt;</code> element.</p>
+  </section>
+
+  <section class="grid cols-2" style="margin-top:14px">
+    <article class="card">
+      <h2 class="card-title">CSS quick reference</h2>
+      <ul class="list">
+        <li><span class="badge">Variables</span> <code>var(--accent)</code></li>
+        <li><span class="badge">Class</span> <code>.card</code></li>
+        <li><span class="badge">Pseudo</span> <code>:hover</code>, <code>:focus-visible</code></li>
+        <li><span class="badge">Responsive</span> <code>@media (min-width: 720px)</code></li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2 class="card-title">DevTools checklist</h2>
+      <ul class="list">
+        <li>Elements panel: inspect HTML structure</li>
+        <li>Styles panel: toggle rules on/off</li>
+        <li>Console: run <code>document.title</code></li>
+        <li>Network: see which files load (CSS/JS)</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">FAQ (interactive without JS)</h2>
+
+    <details>
+      <summary>Why aren’t my CSS variables changing anything?</summary>
+      <p class="muted">Variables only affect the page when they are used with <code>var(--name)</code>. Example: <code>background: var(--bg);</code></p>
+    </details>
+
+    <details>
+      <summary>How do I know my CSS file is loading?</summary>
+      <p class="muted">Open DevTools → Network tab → refresh. You should see <code>styles.css</code> load with status 200.</p>
+    </details>
+
+    <details>
+      <summary>Why does the browser block the form?</summary>
+      <p class="muted">Because inputs use <code>required</code> and email uses <code>type="email"</code>. That triggers built-in browser validation.</p>
+    </details>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="small">Built for Module 1: HTML structure + CSS selectors + basic JavaScript + Edge DevTools.</p>
+</footer>
+</body>
+</html>
