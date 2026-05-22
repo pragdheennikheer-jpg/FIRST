@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About | Module 1 Demo Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <a class="logo" href="index.html" aria-label="Module 1 Demo Site">
+      <span class="logo-badge" aria-hidden="true"></span>
+      Module 1 Demo Site
+    </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="resources.html">Resources</a>
+        <a href="ContactUs.html">Contact</a>
+      </nav>
+
+    <div class="header-actions">
+      <button type="button" class="secondary" data-action="cycle-accent" aria-label="Change theme accent">Theme</button>
+    </div>
+  </div>
+</header>
+
+<main class="site-main">
+  <section class="hero">
+    <h1>About this project</h1>
+    <p>This site is intentionally small and readable. Students can inspect HTML structure, CSS selectors, and JavaScript events without being overwhelmed.</p>
+  </section>
+
+  <section class="grid cols-2" style="margin-top:14px">
+    <article class="card">
+      <h2 class="card-title">Semantic HTML</h2>
+      <p class="muted">Each page uses <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> for structure.</p>
+      <ul class="list">
+        <li>Improves accessibility and readability</li>
+        <li>Helps screen readers navigate content</li>
+        <li>Makes layouts easier to reason about</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2 class="card-title">Modern CSS</h2>
+      <p class="muted">Your ContactUs theme is reused across the whole site.</p>
+      <ul class="list">
+        <li>Design tokens using <code>:root</code> variables</li>
+        <li>Responsive layout with media queries</li>
+        <li>Focus + validation states for forms</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">JavaScript (minimal on purpose)</h2>
+    <p class="muted">Module 1 JS is kept beginner-friendly:</p>
+    <ul class="list">
+      <li>Highlights the current page in the navigation</li>
+      <li>Cycles theme accent colors (demonstrates DOM + events)</li>
+      <li>Handles contact form submit after built-in validation</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="small">Built for Module 1: HTML structure + CSS selectors + basic JavaScript + Edge DevTools.</p>
+</footer>
+</body>
+</html>
